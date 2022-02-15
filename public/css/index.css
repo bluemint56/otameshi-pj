@@ -1,0 +1,80 @@
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.content {
+  width: 70%;
+  height: 50%;
+  border: 2px solid LightSlateGray;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.index-ttl {
+  text-align: center;
+  margin-top: 7px;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+a {
+  text-decoration: none;
+}
+.menu-btn {
+  display: flex;
+  justify-content: space-around;
+}
+.create-btn {
+  border: 1px solid DarkOrange;
+  color: DarkOrange;
+  padding: 8px 25px;
+  border-radius: 10px;
+}
+.create-btn:hover {
+  background-color: DarkOrange;
+  color: white;
+}
+.update-btn {
+  border: 1px solid RoyalBlue;
+  color: RoyalBlue;
+  padding: 8px 25px;
+  border-radius: 10px;
+}
+.update-btn:hover {
+  background-color: RoyalBlue;
+  color: white;
+}
+.delete-btn {
+  border: 1px solid Crimson;
+  color: Crimson;
+  padding: 8px 25px;
+  border-radius: 10px;
+}
+.delete-btn:hover {
+  background-color: Crimson;
+  color: white;
+}
+.search-btn {
+  border: 1px solid LimeGreen;
+  color: LimeGreen;
+  padding: 8px 25px;
+  border-radius: 10px;
+}
+.search-btn:hover {
+  background-color: LimeGreen;
+  color: white;
+}
+table {
+  margin: 20px auto;
+  width: 80%;
+}
+table th {
+  padding: 10px;
+}
+table td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px dashed LightSlateGray;
+}

@@ -1,0 +1,56 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.content {
+  width: 30%;
+  height: 50%;
+  border: 3px solid DarkBlue;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 5px 5px MidnightBlue;
+}
+p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+table {
+  margin: 20px auto;
+  width: 80%;
+}
+table th {
+  padding: 10px;
+}
+table td {
+  text-align: center;
+  padding: 10px;
+}
+input {
+  border: 1px solid DarkBlue;
+}
+.login-btn {
+  background-color: DarkBlue;
+  border: 3px solid DarkBlue;
+  color: white;
+  padding: 8px 20px;
+}
+.login-btn:hover {
+  background-color: white;
+  color: DarkBlue;
+  font-weight: bold;
+  border: 3px solid DarkBlue;
+  border-radius: 10px;
+}
+.registration {
+  text-align: right;
+}
+a {
+  text-decoration: none;
+  color: DarkBlue;
+}
