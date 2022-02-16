@@ -24,21 +24,18 @@
       <th>タスク名</th>
       <th>更新ボタン</th>
     </tr>
+
+    @foreach($todos as $todo)
     <tr>
-      <td>2022/01/01</td>
-      <td>おさんぽする</td>
-      {{--<form action="/todo/update" method="POST">
-        @csrf
-        <input type="hidden" name="content" value="{{$item->content}}">--}}
+      <form action="/todo/update" method="POST">
+      @csrf
+      <input type="hidden" name="content" value="{{$todo->content}}">
+      <td>{{$todo->updated_at}}</td>
+      <td><input type="text" value="{{$todo->content}}" name="content" class="frame"></td>
       <td><button type="submit" class="update-btn">更新</button></td>
     </tr>
-    {{--@foreach($items as $item)
-      <tr>
-        <td>{{$item->updated_at}}</td>
-        <td>{{$item->content}}</td>
-    </tr>
     @endforeach
-    --}}
+    </form>
 
 </table>
 

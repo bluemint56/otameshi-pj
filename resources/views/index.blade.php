@@ -15,7 +15,7 @@
 
 @section('main')
 <div class="index-ttl">
-  <h3>やること</h3>
+  <h3>タスク  一覧表</h3>
 </div>
 <div class="menu-btn">
   <a href="/todo/create" class="create-btn">追加</a>
@@ -31,17 +31,12 @@
       <th>タスク名</th>
     </tr>
 
+    @foreach($todos as $todo)
     <tr>
-      <td>2022/01/01</td>
-      <td>おさんぽする</td>
+      <td>{{$todo->updated_at}}</td>
+      <td>{{$todo->content}}</td>
     </tr>
-
-    {{--@foreach($items as $item)
-    <tr>
-      <td>{{$item->updated_at}}</td>
-      <td>{{$item->content}}</td>
-    </tr>
-    @endforeach--}}
+    @endforeach
     </table>
 @endsection
 </body>

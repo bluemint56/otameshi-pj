@@ -21,6 +21,14 @@
 <div class="create-todo">
   <form action="/todo/create" method="POST">
     @csrf
+
+      @if (count($errors) > 0)
+    <ul>
+      @foreach($errors->all() as $error)
+      <li>{{$error}}</li>
+      @endforeach
+    </ul>
+      @endif
     <div class="f-create">
       <input type="text" name="content" class="frame">
       <button type="submit" class="create-btn">追加</button>
@@ -32,17 +40,13 @@
       <th>作成時刻</th>
       <th>タスク名</th>
     </tr>
-    <tr>
-      <td>2022/01/01</td>
-      <td>おさんぽする</td>
-    </tr>
-    {{--@foreach($items as $item)
+
+    @foreach($todos as $todo)
       <tr>
-        <td>{{$item->updated_at}}</td>
-        <td>{{$item->content}}</td>
+        <td>{{$todo->updated_at}}</td>
+        <td>{{$todo->content}}</td>
     </tr>
     @endforeach
-    --}}
 
 </table>
 <div class="back-home">

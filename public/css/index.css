@@ -16,8 +16,9 @@ body {
 .index-ttl {
   text-align: center;
   margin-top: 7px;
-  font-size: 20px;
-  margin-bottom: 12px;
+  font-size: 24px;
+  font-family: 
+  margin: 17px;
 }
 a {
   text-decoration: none;

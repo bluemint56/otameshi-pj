@@ -7,7 +7,6 @@ body {
 .content {
   background-color: white;
   width: 70%;
-  height: 50%;
   border: 2px solid white;
   border-radius: 3px;
   position: absolute;
@@ -20,6 +19,14 @@ body {
   text-align: center;
   padding: 10px;
 }
+ul {
+  text-align: center;
+}
+li {
+  list-style: none;
+  padding: 3px;
+  font-weight: bold;
+}
 .f-create {
   display: flex;
   justify-content:space-evenly;
@@ -27,6 +34,7 @@ body {
 }
 .frame {
   width: 50%;
+  border: 1px solid orangered;
 }
 .create-btn {
   border: 1px solid DarkOrange;
@@ -56,6 +64,7 @@ a {
 .back-home {
   display: flex;
   justify-content: center;
+  padding-bottom: 5px;
 }
 .home-btn {
   border: 1px solid Magenta;
