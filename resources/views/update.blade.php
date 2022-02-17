@@ -29,13 +29,13 @@
     <tr>
       <form action="/todo/update" method="POST">
       @csrf
-      <input type="hidden" value="{{$todos->content}}" name="content">
+    <input type="hidden" value="{{$todo->id}}" name="id">
       <td>{{$todo->updated_at}}</td>
       <td><input type="text" value="{{$todo->content}}" name="content" class="frame"></td>
       <td><button type="submit" class="update-btn">更新</button></td>
     </tr>
-    @endforeach
     </form>
+    @endforeach
 
 </table>
 
