@@ -33,8 +33,8 @@ class TodoController extends Controller
     public function update(TodoRequest $request)
     {
         $validated = $request->validated();
+        dd($todos);
         $todos = $request->all();
-        dd($request->content);
         unset($todos['_token']);
         Todo::where('content', $request->content)->update($todos);
         return redirect('/todo/update');
