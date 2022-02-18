@@ -20,23 +20,25 @@
 
 <form action="/todo/find" method="POST">
   @csrf
+  <input type="hidden" value="{{$todo->updated_at}}">
   <div class="f-search">
-  <input type="text" name="content" class="frame">
+  <input type="text" name="updated_at" class="frame" placeholder="例: 2022-01-01">
   <button type="submit" class="search-btn">検索</button>
-</div>
+  </div>
+</form>
 
 <table>
     <tr>
       <th>作成時刻</th>
       <th>タスク名</th>
     </tr>
-    
+
 @foreach($todos as $todo)
       <tr>
         <td>{{$todo->updated_at}}</td>
         <td>{{$todo->content}}</td>
-    </tr>
-    @endforeach
+      </tr>
+@endforeach
 
 </table>
 

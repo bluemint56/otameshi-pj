@@ -44,15 +44,24 @@ class TodoController extends Controller
         $todos = Todo::all();
         return view('delete', ['todos' => $todos]);
     }
-    public function remove(TodoRequest $request)
+    public function remove(Request $request)
     {
-        $todo = Todo::find($request->id)->delete();
+        $todos = Todo::find($request->id)->delete();
         return redirect('/todo/delete');
     }
     public function find(Request $request)
     {
         $todos = Todo::all();
         return view('search', ['todos' => $todos]);
+    }
+    public function search(Request $request)
+    {
+        $todos = Todo::where('updated_at', 'LIKE',"%{$request->input}%")->get();
+        $data = [
+            'input' => $request->input,
+            'todos' => $todos
+        ];
+        return redirect('/todo/find', $data);
     }
     public function login()
     {

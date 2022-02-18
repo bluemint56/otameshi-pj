@@ -22,4 +22,5 @@ Route::post('/todo/update', [TodoController::class, 'update']);
 Route::get('/todo/delete', [TodoController::class, 'delete']);
 Route::post('/todo/delete', [TodoController::class, 'remove']);
 Route::get('/todo/find', [TodoController::class, 'find']);
+Route::post('/todo/find', [TodoController::class, 'search']);
 Route::get('/', [TodoController::class, 'login']);
