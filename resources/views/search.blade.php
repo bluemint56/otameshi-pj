@@ -20,7 +20,7 @@
 
 <form action="/todo/find" method="POST">
   @csrf
-  <input type="hidden" value="{{$todo->updated_at}}">
+  <input type="hidden" name="updated_at">
   <div class="f-search">
   <input type="text" name="updated_at" class="frame" placeholder="例: 2022-01-01">
   <button type="submit" class="search-btn">検索</button>
