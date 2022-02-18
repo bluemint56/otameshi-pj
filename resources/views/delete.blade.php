@@ -22,23 +22,20 @@
     <tr>
       <th>作成時刻</th>
       <th>タスク名</th>
-      <th>更新ボタン</th>
+      <th>削除ボタン</th>
     </tr>
-    <tr>
-      <td>2022/01/01</td>
-      <td>おさんぽする</td>
-      {{--<form action="/todo/delete" method="POST">
-        @csrf
-        <input type="hidden" name="content" value="{{$item->content}}">--}}
-      <td><button type="submit" class="delete-btn">削除</button></td>
-    </tr>
-    {{--@foreach($items as $item)
+    
+    @foreach($todos as $todo)
       <tr>
-        <td>{{$item->updated_at}}</td>
-        <td>{{$item->content}}</td>
-    </tr>
+        <form action="/todo/delete" method="POST">
+          @csrf
+        <input type="hidden" name="id" value="{{$todo->id}}">
+        <td>{{$todo->updated_at}}</td>
+        <td>{{$todo->content}}</td>
+        <td><button type="submit" class="delete-btn">削除</button></td>
+        </form>
+      </tr>
     @endforeach
-    --}}
 </table>
 
 <div class="back-home">

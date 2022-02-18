@@ -39,13 +39,20 @@ class TodoController extends Controller
         Todo::where('id', $request->id)->update($todos);
         return redirect('/todo/update');
     }
-    public function delete()
+    public function delete(Request $request)
     {
-        return view('delete');
+        $todos = Todo::all();
+        return view('delete', ['todos' => $todos]);
     }
-    public function find()
+    public function remove(TodoRequest $request)
     {
-        return view('search');
+        $todo = Todo::find($request->id)->delete();
+        return redirect('/todo/delete');
+    }
+    public function find(Request $request)
+    {
+        $todos = Todo::all();
+        return view('search', ['todos' => $todos]);
     }
     public function login()
     {

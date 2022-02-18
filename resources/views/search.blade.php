@@ -30,17 +30,13 @@
       <th>作成時刻</th>
       <th>タスク名</th>
     </tr>
-    <tr>
-      <td>2022/01/01</td>
-      <td>おさんぽする</td>
-</tr>
-{{--@foreach($items as $item)
+    
+@foreach($todos as $todo)
       <tr>
-        <td>{{$item->updated_at}}</td>
-        <td>{{$item->content}}</td>
+        <td>{{$todo->updated_at}}</td>
+        <td>{{$todo->content}}</td>
     </tr>
     @endforeach
-    --}}
 
 </table>
 

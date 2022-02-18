@@ -36,7 +36,6 @@
     </tr>
     </form>
     @endforeach
-
 </table>
 
 <div class="back-home">

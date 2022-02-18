@@ -47,6 +47,7 @@ a {
 .back-home {
   display: flex;
   justify-content: center;
+  padding-bottom: 5px;
 }
 .home-btn {
   border: 1px solid Magenta;
