@@ -56,12 +56,12 @@ class TodoController extends Controller
     }
     public function search(Request $request)
     {
-        $todos = Todo::where('updated_at','LIKE','%'.$request->updated_at.'%')->get();
+        $todos = Todo::whereDate('updated_at', $request->updated_at)->get();
         $data = [
             'input' => $request->updated_at,
             'todos' => $todos
         ];
-        return redirect('/todo/find')->with(['todos' => $data]);
+        return view('search', ['todos' => $todos ]);
     }
     public function login()
     {
