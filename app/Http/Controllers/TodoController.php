@@ -61,7 +61,7 @@ class TodoController extends Controller
             'input' => $request->updated_at,
             'todos' => $todos
         ];
-        return view('search', ['todos' => $data]);
+        return redirect('/todo/find')->with(['todos' => $data]);
     }
     public function login()
     {
