@@ -15,10 +15,10 @@
 
 @section('main')
 <div class="login-ttl">
-  <p>ログインしてください</p>
+  <p>{{$text}}</p>
 </div>
 
-<form action="/auth" method="POST">
+<form action="/home" method="POST">
   @csrf
 <table>
 <tr><th>メールアドレス:</th></tr>
@@ -32,7 +32,7 @@
 </table>
 </form>
 <div class="registration">
-<a href="" >新規登録</a>
+<a href="/register" >新規登録</a>
 @endsection
 </body>
 </html>

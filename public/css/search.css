@@ -30,10 +30,11 @@ p {
 }
 .frame {
   width: 50%;
+  border: 1px solid LimeGreen;
 }
 .search-btn {
   border: 1px solid MediumSpringGreen;
-  color: MediumSpringGreen ;
+  color: MediumSeaGreen;
   padding: 8px 25px;
   border-radius: 10px;
 }
@@ -59,6 +60,7 @@ a {
 .back-home {
   display: flex;
   justify-content: center;
+  padding-bottom: 5px;
 }
 .home-btn {
   border: 1px solid Magenta;

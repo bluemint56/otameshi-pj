@@ -14,7 +14,7 @@ use App\Http\Controllers\TodoController;
 |
 */
 
-Route::get('/home', [TodoController::class, 'index']);
+Route::get('/home', [TodoController::class, 'index'])->middleware('auth');
 Route::get('/todo/create', [TodoController::class, 'add']);
 Route::post('/todo/create', [TodoController::class, 'create']);
 Route::get('/todo/update', [TodoController::class, 'edit']);
@@ -24,3 +24,15 @@ Route::post('/todo/delete', [TodoController::class, 'remove']);
 Route::get('/todo/find', [TodoController::class, 'find']);
 Route::post('/todo/find', [TodoController::class, 'search']);
 Route::get('/', [TodoController::class, 'login']);
+Route::post('/home', [TodoController::class, 'logincheck']);
+
+
+
+Route::get('/login', function () {
+    return view('welcome');
+});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

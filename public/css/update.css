@@ -19,6 +19,9 @@ body {
   text-align: center;
   padding: 10px;
 }
+.frame {
+  border: 1px solid Blue;
+}
 .update-btn {
   border: 1px solid DodgerBlue;
   color: DodgerBlue;

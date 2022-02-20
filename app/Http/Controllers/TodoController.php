@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Todo;
 use Illuminate\Http\Request;
 use App\Http\Requests\TodoRequest;
+use Illuminate\Support\Facades\Auth;
 
 class TodoController extends Controller
 {
     public function index(Request $request)
     {
+        $user = Auth::user();
         $todos = Todo::all();
-        return view('index', ['todos' => $todos]);
+        $param = ['todos' => $todos, 'user' => $user];
+        return view('index', $param);
     }
     public function add()
     {
@@ -63,8 +66,24 @@ class TodoController extends Controller
         ];
         return view('search', ['todos' => $todos ]);
     }
-    public function login()
+    public function login(Request $request)
     {
-        return view('login');
+        $text = ['text' => 'ログインしてください'];
+        return view('login', $text);
     }
+    public function logincheck(Request $request)
+    {
+        $email = $request->email;
+        $password = $request->password;
+        if (Auth::attempt([
+            'email' => $email,
+            'password' => $password
+        ])) {
+            return redirect('/home');
+        } else {
+            $text = 'ログインに失敗しました';
+        }
+        return view('login', ['text' => $text]);
+    }
+
 }

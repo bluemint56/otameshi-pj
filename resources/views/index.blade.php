@@ -14,6 +14,9 @@
 @section('title', 'Todo List')
 
 @section('main')
+@if (Auth::check())
+<p>ログイン中のユーザー: {{$user->name}} さん</p>
+@endif
 <div class="index-ttl">
   <h3>タスク  一覧表</h3>
 </div>
@@ -38,6 +41,11 @@
     </tr>
     @endforeach
     </table>
+  <form action="/logout" method="POST">
+    @csrf
+  <div class="logout-button">
+    <button type="submit" class="logout-btn">ログアウト</button>
+</div>
 @endsection
 </body>
 </html>
