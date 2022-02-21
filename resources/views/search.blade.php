@@ -23,7 +23,7 @@
   <input type="hidden" name="updated_at">
     <p>日付を入力してください</p>
   <div class="f-search">
-  <input type="text" name="updated_at" class="frame" placeholder="例: 2022-01-01">
+  <input type="date" name="updated_at" class="frame" placeholder="例: 2022-01-01">
   <button type="submit" class="search-btn">検索</button>
   </div>
 </form>
