@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\TagController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,15 @@ Route::get('/todo/find', [TodoController::class, 'find']);
 Route::post('/todo/find', [TodoController::class, 'search']);
 Route::get('/', [TodoController::class, 'login']);
 Route::post('/home', [TodoController::class, 'logincheck']);
+
+Route::get('/relation', [TodoController::class, 'relate']);
+
+Route::prefix('tag')->group(function(){
+    Route::get('/', [TagController::class, 'index']);
+    Route::post('/add', [TagController::class, 'create']);
+    Route::post('/update', [TagController::class, 'update']);
+    Route::post('/delete', [TagController::class, 'delete']);
+});
 
 
 

@@ -69,6 +69,15 @@ a {
   background-color: LimeGreen;
   color: white;
 }
+.tag-btn {
+  border: 1px solid black;
+  padding: 8px 25px;
+  border-radius: 10px;
+}
+.tag-btn:hover {
+  background-color: DarkSlateGray;
+  color: white;
+}
 table {
   margin: 20px auto;
   width: 80%;
@@ -95,4 +104,8 @@ table td {
 .logout-btn:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+svg.w-5.h-5 { 
+  width: 30px;
+  height: 30px;
 }

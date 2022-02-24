@@ -1,0 +1,58 @@
+body {
+  background-color: white;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.content {
+  width: 70%;
+  border: 2px solid DarkSlateGray;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+table {
+  margin: 0 auto;
+}
+th {
+  background-color: Turquoise;
+  color: white;
+  padding: 7px 15px;
+
+}
+td {
+  padding: 8px 20px;
+  background-color: white;
+  text-align: center;
+}
+.tag-link {
+  display: flex;
+  justify-content: center;
+  margin: 7px 5px;
+}
+.tag-page {
+  border: 1px solid DarkSlateGray;
+  color: DarkSlateGray;
+  padding: 8px 25px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+.tag-page:hover {
+  background-color: DarkSlateGray;
+  color: white;
+}
+.home-btn {
+  border: 1px solid Magenta;
+  color: Magenta;
+  padding: 8px 25px;
+  border-radius: 10px;
+}
+.home-btn:hover {
+  background-color: Magenta;
+  color: white;
+}
+a {
+  text-decoration: none;
+}

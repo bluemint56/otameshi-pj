@@ -25,22 +25,26 @@
   <a href="/todo/update" class="update-btn">更新</a>
   <a href="/todo/delete" class="delete-btn">削除</a>
   <a href="/todo/find" class="search-btn">検索</a>
+  <a href="/relation" class="tag-btn">タグページ</a>
 </div>
 
 <div class="index-todo">
   <table>
     <tr>
+      <th>ID No.</th>
       <th>作成時刻</th>
       <th>タスク名</th>
     </tr>
 
-    @foreach($todos as $todo)
+    @foreach($todos as $todo)<
     <tr>
+      <td>{{$todo->id}}</td>
       <td>{{$todo->updated_at}}</td>
       <td>{{$todo->content}}</td>
     </tr>
     @endforeach
     </table>
+    {{$todos->links()}}
   <form action="/logout" method="POST">
     @csrf
   <div class="logout-button">

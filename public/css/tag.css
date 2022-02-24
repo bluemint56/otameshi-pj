@@ -1,0 +1,82 @@
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.content {
+  width: 70%;
+  border: 2px solid LightSlateGray;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+th {
+  padding: 8px;
+}
+td {
+  padding: 8px;
+}
+.tag-cre {
+  display: flex;
+  justify-content: center;
+}
+.c-btn {
+  border: 1px solid DarkOrange;
+  background-color: DarkOrange;
+  border-radius: 35px;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.tag-content {
+  display: flex;
+  justify-content: center;
+}
+.u-btn {
+  border: 1px solid RoyalBlue;
+  background-color: RoyalBlue;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.d-btn {
+  border: 1px solid Crimson;
+  background-color: Crimson;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tag-link {
+  display: flex;
+  justify-content: center;
+  margin: 7px 5px;
+}
+.tt-btn {
+  border: 1px solid DarkSlateGray;
+  color: DarkSlateGray;
+  padding: 8px 25px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+.tt-btn:hover {
+  background-color: DarkSlateGray;
+  color: white;
+}
+.home-btn {
+  border: 1px solid Magenta;
+  color: Magenta;
+  padding: 8px 25px;
+  border-radius: 10px;
+}
+.home-btn:hover {
+  background-color: Magenta;
+  color: white;
+}
+a {
+  text-decoration: none;
+}

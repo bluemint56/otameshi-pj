@@ -13,6 +13,7 @@ class TodoController extends Controller
     {
         $user = Auth::user();
         $todos = Todo::all();
+        $todos = Todo::Paginate(5);
         $param = ['todos' => $todos, 'user' => $user];
         return view('index', $param);
     }
@@ -84,6 +85,12 @@ class TodoController extends Controller
             $text = 'ログインに失敗しました';
         }
         return view('login', ['text' => $text]);
+    }
+    public function relate(Request $request)
+    {
+        $todos = Todo::all();
+        $todos = Todo::simplePaginate(5);
+        return view('tag.relation', ['todos' => $todos]);
     }
 
 }
