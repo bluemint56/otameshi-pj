@@ -40,7 +40,6 @@
         <td>{{$todo->content}}</td>
       </tr>
 @endforeach
-
 </table>
 
 <div class="back-home">

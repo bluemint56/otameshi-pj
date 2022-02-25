@@ -26,6 +26,7 @@ li {
   list-style: none;
   padding: 3px;
   font-weight: bold;
+  color: red;
 }
 .f-create {
   display: flex;

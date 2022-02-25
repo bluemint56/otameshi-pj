@@ -7,9 +7,10 @@ use App\Models\Tag;
 
 class TagController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request) 
     {
         $tags = Tag::with('todo')->get();
+        $tags = Tag::simplePaginate(4);
         return view('tag.index', ['tags' => $tags]);
     }
     public function create(Request $request)

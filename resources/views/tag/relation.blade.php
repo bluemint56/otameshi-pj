@@ -37,9 +37,11 @@
   </td>
 </tr>
 @endforeach
-{{$todos->links()}}
-
 </table>
+
+<div class="page">
+{{$todos->links()}}
+</div>
 
 <div class="tag-link">
 <a href="/tag" class="tag-page">タグ編集ページへ</a>

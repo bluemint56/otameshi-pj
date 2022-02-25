@@ -38,6 +38,8 @@
     @endforeach
 </table>
 
+{{$todos->links()}}
+
 <div class="back-home">
 <a href="/home" class="home-btn">トップページに戻る</a>
 </div>

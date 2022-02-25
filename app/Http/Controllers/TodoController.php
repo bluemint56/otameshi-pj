@@ -20,6 +20,7 @@ class TodoController extends Controller
     public function add()
     {
         $todos = Todo::all();
+        $todos = Todo::simplePaginate(5);
         return view('create', ['todos' => $todos]);
     }
     public function create(TodoRequest $request)
@@ -32,6 +33,7 @@ class TodoController extends Controller
     public function edit(Request $request)
     {
         $todos = Todo::all();
+        $todos = Todo::simplePaginate(5);
         return view('update', ['todos' => $todos]);
     }
     public function update(TodoRequest $request)
@@ -46,6 +48,7 @@ class TodoController extends Controller
     public function delete(Request $request)
     {
         $todos = Todo::all();
+        $todos = Todo::simplePaginate(5);
         return view('delete', ['todos' => $todos]);
     }
     public function remove(Request $request)
@@ -56,6 +59,7 @@ class TodoController extends Controller
     public function find(Request $request)
     {
         $todos = Todo::all();
+        
         return view('search', ['todos' => $todos]);
     }
     public function search(Request $request)
@@ -94,3 +98,4 @@ class TodoController extends Controller
     }
 
 }
+

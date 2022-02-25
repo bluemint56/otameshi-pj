@@ -15,6 +15,7 @@ use App\Http\Controllers\TagController;
 |
 */
 
+
 Route::get('/home', [TodoController::class, 'index'])->middleware('auth');
 Route::get('/todo/create', [TodoController::class, 'add']);
 Route::post('/todo/create', [TodoController::class, 'create']);

@@ -18,6 +18,14 @@
 <h3>更新<h3>
 </div>
 
+@if (count($errors) > 0)
+    <ul>
+      @foreach($errors->all() as $error)
+      <li>{{$error}}</li>
+      @endforeach
+    </ul>
+      @endif
+
 <table>
     <tr>
       <th>作成時刻</th>
@@ -37,6 +45,8 @@
     </form>
     @endforeach
 </table>
+
+{{$todos->links()}}
 
 <div class="back-home">
 <a href="/home" class="home-btn">トップページに戻る</a>

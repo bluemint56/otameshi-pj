@@ -14,7 +14,6 @@
 @section('title', 'TAG 編集')
 
 @section('main')
-<h2>タグ編集ページ</h2>
 <form action="/tag/add" method="POST" class="tag-cre">
   @csrf
   <table>
@@ -32,7 +31,8 @@
 
 <table class="tag-content">
   <tr>
-    <th>TAGS</th>
+    <th>TASK ID</th>
+    <th>TAG</th>
     <th>タグ編集</th>
     <th>タグ削除</th>
 </tr>
@@ -41,7 +41,8 @@
   <form action="/tag/update" method="POST">
     @csrf
     <input type="hidden" name="id" value="{{$tag->id}}">
-    <td><input type="text" value="{{$tag->getTag()}}" name="tag"></td>
+    <td><input type="number" name="todos_id" value="{{$tag->todos_id}}"></td>
+    <td><input type="text" value="{{$tag->tag}}" name="tag"></td>
     <td><button type="submit" class="u-btn">編集</button></td>
   </form>
 
@@ -54,9 +55,12 @@
 @endforeach
 </table>
 
+{{$tags->links()}}
+
 <div class="tag-link">
 <a href="/relation" class="tt-btn">タスク&タグ</a>
 <a href="/home" class="home-btn">トップページへ</a>
+</div>
 @endsection
 </body>
 </html>

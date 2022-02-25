@@ -19,6 +19,14 @@ body {
   text-align: center;
   padding: 10px;
 }
+ul {
+  text-align: center;
+}
+li {
+  list-style: none;
+  font-weight: bold;
+  color: red;
+}
 .frame {
   border: 1px solid Blue;
 }

@@ -44,7 +44,7 @@
     </tr>
     @endforeach
     </table>
-    {{$todos->links()}}
+    {{$todos->links('vendor.pagination.originalp')}}
   <form action="/logout" method="POST">
     @csrf
   <div class="logout-button">
