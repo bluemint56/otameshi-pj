@@ -60,6 +60,7 @@
 <div class="tag-link">
 <a href="/relation" class="tt-btn">タスク&タグ</a>
 <a href="/home" class="home-btn">トップページへ</a>
+<a href="/tag/search" class="ts-btn">タグ検索ページへ</a>
 </div>
 @endsection
 </body>

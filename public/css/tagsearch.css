@@ -1,0 +1,88 @@
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.content {
+  width: 70%;
+  border: 2px solid LightSlateGray;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+p {
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+}
+.s-form {
+  text-align: center;
+}
+input {
+  border-color: green;
+}
+.search-btn {
+  border: 1px solid green;
+  background-color: green;
+  color: white;
+  padding: 7px;
+  border-radius: 20px;
+}
+.search-btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+table {
+  text-align: center;
+  margin: 15px auto;
+}
+th {
+  padding: 7px;
+  border: 1px solid ForestGreen;
+  background-color: SpringGreen;
+}
+td {
+  padding: 7px;
+  border-bottom: 1px solid green;
+}
+.tag-link {
+  text-align: center;
+  margin: 7px 5px;
+}
+a {
+  text-decoration: none;
+}
+.tt-btn {
+  border: 1px solid DarkSlateGray;
+  color: DarkSlateGray;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+.tt-btn:hover {
+  background-color: DarkSlateGray;
+  color: white;
+}
+.home-btn {
+  border: 1px solid Magenta;
+  color: Magenta;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.home-btn:hover {
+  background-color: Magenta;
+  color: white;
+}
+.t-btn {
+  border: 1px solid DarkSlateGray;
+  color: DarkSlateGray;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+.t-btn:hover {
+  background-color: DarkSlateGray;
+  color: white;
+}

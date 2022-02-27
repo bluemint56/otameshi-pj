@@ -59,7 +59,6 @@ class TodoController extends Controller
     public function find(Request $request)
     {
         $todos = Todo::all();
-        
         return view('search', ['todos' => $todos]);
     }
     public function search(Request $request)

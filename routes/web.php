@@ -35,6 +35,8 @@ Route::prefix('tag')->group(function(){
     Route::post('/add', [TagController::class, 'create']);
     Route::post('/update', [TagController::class, 'update']);
     Route::post('/delete', [TagController::class, 'delete']);
+    Route::get('/search', [TagController::class, 'find']);
+    Route::post('/search', [TagController::class, 'search']);
 });
 
 

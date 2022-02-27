@@ -15,11 +15,12 @@ class Tag extends Model
         'todos_id' => 'required',
         'tag' => 'required | max:20',
     );
+
     public function getTag(){
         return 'ID'.$this->id . ':' . $this->tag;
     }
     public function todo()
     {
-        return $this->belongsTo('App\Models\Todo');
+        return $this->belongsTo('App\Models\Todo', 'content');
     }
 }

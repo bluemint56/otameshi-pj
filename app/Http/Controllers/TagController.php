@@ -34,4 +34,18 @@ class TagController extends Controller
         Tag::find($request->id)->delete();
         return redirect('/tag');
     }
+    public function find(Request $request)
+    {
+        $tags = Tag::all();
+        return view('/tag/search', ['tags' => $tags]);
+    }
+    public function search(Request $request)
+    {
+        $tags = Tag::where('tag',"LIKE", "%".$request->tag."%")->get();
+        $data = [
+            'input' => $request->tag,
+            'tags' => $tags
+        ];
+        return view('/tag/search', ['tags' => $tags]);
+    }
 }
